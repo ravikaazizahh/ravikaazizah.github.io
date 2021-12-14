@@ -11,6 +11,8 @@
     <!-- Bootstratp Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -48,7 +50,7 @@
     <section class="jumbotron text-center">
       <img src="img/vike.jpeg" alt="Vike" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Ravika Azizah</h1>
-      <p class="lead">Student | Graphic Designer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -68,10 +70,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>Halo! Aku Vike, seorang Mahasiswa yang nekat ngambil jurusan Teknik Informatika tanpa punya basic skill ngoding apapun. But, selama 6 bulan terakhir ini aku antusias dengan yang namanya HTML CSS dan teman temannya.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>And, this is my portfolio website, yang dimana website ini berisikan portofolio aku yang tidak seberapa tapi penuh makna. So, happy scrollingg!</p>
           </div>
         </div>
@@ -96,7 +98,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/projects/kartini-vike.jpg" class="card-img-top" alt="Project1" />
               <div class="card-body">
                 <p class="card-text">Sebuah poster yang menggambarkan peringatan hari kartini, tepat pada tanggal 21 april 2020. Poster ini dibuat sewaktu saya menjadi On Job Training di ITPLNMEDIA</p>
@@ -104,7 +106,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="img/projects/HariJadiPancasila-Matauli.jpg" class="card-img-top" alt="Project2" />
               <div class="card-body">
                 <p class="card-text">Poster ini di buat sewaktu aku duduk di bangku SMA. Tepatnya ketika aku menjabat menjadi seorang tukang edit ala-ala di Hari Kesaktian Pancasila 1 Juni 2018</p>
@@ -112,7 +114,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/projects/card-baksos.jpg" class="card-img-top" alt="Project3" />
               <div class="card-body">
                 <p class="card-text">Bakti Sosial 2021, dimana aku naik jabatan menjadi kang edit terpercaya. Sebuah card id panitia menjadi project pertama aku setelah naik jabatan.</p>
@@ -120,15 +122,15 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card rutinitas">
+            <div class="card rutinitas" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/projects/rutinitas-pagi-vike.PNG" class="card-img-top" alt="Project4" />
               <div class="card-body">
                 <p class="card-text">Ini adalah sebuah editan hasil gabut aku selama pandemi berlangsung. Not bad lah yaa hehe</p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <div class="card kpp">
+          <div class="col-md-4 mt-1n mb-3">
+            <div class="card kpp" data-aos="flip-left" data-aos-duration="500" data-aos-delay="400">
               <img src="img/projects/kppbaksos.jpg" class="card-img-top" alt="Project5" />
               <div class="card-body">
                 <p class="card-text">Selama menjadi kang edit terpercaya, aku ditugaskan lagi untuk membuat poster dana usaha buat paid promote bakti sosial</p>
@@ -136,7 +138,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="500">
               <img src="img/projects/storyboard-vike.jpg" class="card-img-top" alt="Project6" />
               <div class="card-body">
                 <p class="card-text">FYI, This is my first Storyboard, dan itupun karena tugas dari matakuliah teknologi informasi. too pretty, right?</p>
@@ -202,6 +204,23 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Student | Graphic Designer" });
+      gsap.from(".jumbotron img", { duration: 1, y: -100, opacity: 0, ease: "bounce" });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
     <script type="text/javascript" src="vanilla-tilt.min.js"></script>
   </body>
 </html>
